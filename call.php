@@ -105,9 +105,9 @@ class prankCall{
 }
 echo "#################################\n# Copyright : @xptra | SGB-Team #\n#################################\n";
 echo "Pengepul kode By : Yahya Hamid\n";
-echo "edited by reza\n";
+echo "edited by : reza\n";
 echo "Formatnya 628xxxxx\n";
-echo "?Number			";
+echo "?No. Hp Target :			";
 $no = get();
 $n = new prankCall($no);
 $n->run();
