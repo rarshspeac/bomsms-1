@@ -42,10 +42,10 @@ class prankCall{
 			echo "Sukses\n";
 		}
 	}
-	private function loop($many,$sleep=null){
+	private function custom($jumlah,$sleep=null){
 		$a=0;
 		$no = $this->correct($this->number);
-		while($a<$many){
+		while($a<$jumlah){
 			$rand = rand(0123456,9999999);
 			$rands = $this->randStr(12);
 			$post = "method=CALL&countryCode=id&phoneNumber=$no&templateID=pax_android_production";
@@ -72,7 +72,7 @@ class prankCall{
 				$a++;
 			}
 			if($sleep!=null) sleep($sleep);
-			if($a>=$many) echo "\nCompleted!\n";
+			if($a>=$jumlah) echo "\nCompleted!\n";
 		}
 	}
 	private function randStr($l){
@@ -86,8 +86,8 @@ class prankCall{
 	public function run(){
 		while(true){
 			echo "?custom(y/n)		";
-			$loop = $this->get();
-			if($loop=="y" OR $loop=="n"){
+			$custom = $this->get();
+			if($custom=="y" OR $custom=="n"){
 				break;
 			}else{
 				echo "Jika ya jawab y jika tidak jawab n\n";
@@ -96,7 +96,7 @@ class prankCall{
 		}
 		if($loop=="y"){
 			echo "?Jumlah			";
-			$many = $this->get();
+			$jumlah = $this->get();
 			$this->custom($many);
 		}else{
 			$this->ekse();
@@ -105,9 +105,9 @@ class prankCall{
 }
 echo "#################################\n# Copyright : @xptra | SGB-Team #\n#################################\n";
 echo "Pengepul kode By : Yahya Hamid\n";
-echo "edited by : reza\n";
-echo "Formatnya 628xxxxx\n";
-echo "?No. Hp Target :			";
+echo "Recode by : Reza Pangestu\n";
+echo "Formatnya 628xxx\n";
+echo "Number :			";
 $no = get();
 $n = new prankCall($no);
 $n->run();
