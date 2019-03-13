@@ -97,7 +97,7 @@ class prankCall{
 		if($loop=="y"){
 			echo "?Jumlah			";
 			$jumlah = $this->get();
-			$this->custom($many);
+			$this->custom($jumlah);
 		}else{
 			$this->ekse();
 		}
